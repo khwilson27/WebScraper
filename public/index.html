@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <title>Scraping With Mongoose</title>
+    <link rel="icon" href="https://d30y9cdsu7xlg0.cloudfront.net/png/184802-200.png" type="image/gif" sizes="16x16">
     <style>
-      body { 
-        background-color: black;
-      }
+      body { background-color: black }
       p, h1, h2 {
-        color: white;
+        color: white
       }
       #wrapper {
         width: 960px;
@@ -38,12 +37,15 @@
         height: 200px;
         font-size: 18px;
       }
-    </style>
+</style>
+
   </head>
   <body>
     <div id="wrapper">
-      <h1><u>Comments & Scraper</u></h1>
-      <h2><i>Gizmodo Articles</i></h2>
+      <h1>Mongo Web Scraper</h1>
+      <button type="button" id="scrapeBtn">Scrape Gizmodo</button>
+      <button type="button" id="emptyBtn">Remove all records</button>
+      <h2><i>Gizmodo Edition</i></h2>
       <div id="articles"></div>
       <div id="notes"></div>
     </div>
