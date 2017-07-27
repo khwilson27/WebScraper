@@ -15,6 +15,7 @@ var cheerio = require("cheerio");
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
 
+var PORT = process.env.PORT || 3000;
 
 // Initialize Express
 var app = express();
@@ -29,7 +30,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/week18day3mongoose");
+mongoose.connect("mongodb://heroku_5fp9brh4:kj5c2ottl6lq0sdiad4r5nvcf3@ds131621.mlab.com:31621/heroku_5fp9brh4");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -160,6 +161,6 @@ app.delete("/empty", function (req, res) {
 
 
 // Listen on port 3000
-app.listen(3000, function () {
+app.listen(PORT, function () {
   console.log("App running on port 3000!");
 });
